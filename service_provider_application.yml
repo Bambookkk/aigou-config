@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8001
+spring:
+  application:
+    name: USER-PROVIDER #服务名（不要使用下划线）
+  profiles: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/ #服务注册中心的地址，去这里注册服务
+---
+server:
+  port: 8002
+spring:
+  application:
+    name: USER-PROVIDER-TEST #服务名（不要使用下划线）
+  profiles: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/ #服务注册中心的地址，去这里注册服务
