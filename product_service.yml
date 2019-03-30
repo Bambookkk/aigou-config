@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8003
+spring:
+  application:
+    name: PRODUCT-SERVICE #服务名（不要使用下划线）
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatisplus
+    username: root
+    password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/ #服务注册中心的地址，去这里注册服务
+mybatis-plus:
+  mapper-locations: classpath:cn.itsource.mybatisplus.mapper/*Mapper.xml #*Mapper.xml文件的地址
+  type-aliases-package: cn.itsource.mybatisplus.domain #别名配置，多个用,隔开
+---
+server:
+  port: 8004
+spring:
+  application:
+    name: PRODUCT-SERVICE-TEST #服务名（不要使用下划线）
+  profiles: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/ #服务注册中心的地址，去这里注册服务
