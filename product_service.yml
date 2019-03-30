@@ -10,7 +10,7 @@ spring:
   profiles: dev
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mybatisplus
+    url: jdbc:mysql://localhost:3306/aigou
     username: root
     password: 123456
 eureka:
@@ -18,8 +18,8 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka/ #服务注册中心的地址，去这里注册服务
 mybatis-plus:
-  mapper-locations: classpath:cn.itsource.mybatisplus.mapper/*Mapper.xml #*Mapper.xml文件的地址
-  type-aliases-package: cn.itsource.mybatisplus.domain #别名配置，多个用,隔开
+  mapper-locations: classpath:cn/itsource/aigou/mapper/*Mapper.xml #*Mapper.xml文件的地址
+  type-aliases-package: cn.itsource.aigou.domain,cn.itsource.aigou.query #别名配置，多个用,隔开
 ---
 server:
   port: 8004
