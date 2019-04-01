@@ -17,6 +17,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/ #服务注册中心的地址，去这里注册服务
+feign:
+  hystrix:
+    enabled: true #开启断路器
 mybatis-plus:
   mapper-locations: classpath:cn/itsource/aigou/mapper/*Mapper.xml #*Mapper.xml文件的地址
   type-aliases-package: cn.itsource.aigou.domain,cn.itsource.aigou.query #别名配置，多个用,隔开
@@ -31,3 +34,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/ #服务注册中心的地址，去这里注册服务
+feign:
+  hystrix:
+    enabled: true #开启断路器
+mybatis-plus:
+  mapper-locations: classpath:cn/itsource/aigou/mapper/*Mapper.xml #*Mapper.xml文件的地址
+  type-aliases-package: cn.itsource.aigou.domain,cn.itsource.aigou.query #别名配置，多个用,隔开
