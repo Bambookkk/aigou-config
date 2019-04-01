@@ -21,6 +21,8 @@ zuul:
     wbUser.path: /user/**   #访问的时候，是/xxx打头的地址，就使用user-provider来响应 做映射：解决地址太长了，服务名的暴露的问题
     product.serviceId: product-service
     product.path: /product/**
+    common.serviceId: common-service
+    common.path: /common/**
   ignored-services: "*"
   prefix: "/aigou"  # 前缀
 ---
