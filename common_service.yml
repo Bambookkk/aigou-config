@@ -9,6 +9,10 @@ spring:
   application:
     name: COMMON-SERVICE #服务名（不要使用下划线）
   profiles: dev
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 127.0.0.1:9300 #java的客户端要用9300 服务器地址
 eureka:
   client:
     service-url:
